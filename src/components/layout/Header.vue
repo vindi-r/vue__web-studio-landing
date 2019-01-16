@@ -1,31 +1,22 @@
-<template>
-  <header class="header">
-    <div class="inner header__inner">
-      <div class="logo">
-        <Briefcase/>
-        <p class="logo__text">Logo goes here</p>       
-      </div>
-
-      <div class="wrapper">
-
-        <h1>So begins a new age 
-          <br>
-          of knowledge
-        </h1>
-
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vitae nulla quis 
-          <br>
-          turpis cursus pharetra. Fusce blandit nec tortor sit amet ullamcorper.
-        </p>
+<template lang="pug">
+  header.header
+    .inner.header__inner
+      .logo
+        Briefcase
+        p.logo__text Logo goes here
         
-        <Divider />
+      .wrapper
+        h1
+          |So begins a new age 
+          br
+          |of knowledge
+        p
+          |Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vitae nulla quis 
+          br
+          |turpis cursus pharetra. Fusce blandit nec tortor sit amet ullamcorper.
 
-        <Button v-text="title"/>
-      
-      </div>
-    </div>
-
-  </header>
+        Divider
+        Button(v-text='title')
 </template>
 
 <script>
@@ -51,38 +42,39 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
+
+  @import '../../assets/style/vars';
+
   .header {
     height: 100vh;
     max-height: 900px;
-    color: #fff;
+    color: $c-main;
 
     /* for ::before */
     position: relative;
-  }
 
-  .header::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
 
-    background-image: url('../../assets/banner.png');
-    background-size: cover;
-    background-position: center center;
-    filter: brightness(60%)
-  }
+      background-image: url('../../assets/img/banner.png');
+      background-size: cover;
+      background-position: center center;
+      filter: brightness(60%)
+    }
 
-
-
-  .header__inner {
-    height: 100%;
-    display: grid;
-    align-items: center;
-    grid-template-rows: auto 1fr;
-    padding: 3rem 1rem;
+    &__inner {
+      height: 100%;
+      display: grid;
+      align-items: center;
+      grid-template-rows: auto 1fr;
+      padding: 3rem 1rem;
+    }
   }
 
   .logo {
@@ -92,15 +84,15 @@ export default {
     align-self: start;
     display: flex;
     align-items: center;
-  }
 
-  .logo__text {
-    margin: 0;
-    margin-left: 1em;
+    &__text {
+      margin: 0;
+      margin-left: 1em;
 
-    /* align with logo icon */
-    position: relative;
-    top: 4px;
+      /* align with logo icon */
+      position: relative;
+      top: 4px;
+    }
   }
 
   .wrapper {    

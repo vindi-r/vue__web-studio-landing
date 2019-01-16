@@ -1,5 +1,5 @@
-<template>
-  <span class="divider"></span>
+<template lang="pug">
+  span.divider
 </template>
 
 <script>
@@ -8,12 +8,14 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
+  @import '../assets/style/vars';
+
   .divider {
     display: block;
     margin: 2rem 0 3rem;
     height: 1px;
     width: 1.5rem;
-    background-color: #fff;
+    background-color: $c-main;
   }
 </style>

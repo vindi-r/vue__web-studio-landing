@@ -1,7 +1,6 @@
-<template>
-  <div id="app">
-    <Header/>
-  </div>
+<template lang="pug">
+  #app
+    Header
 </template>
 
 <script>
@@ -15,7 +14,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 
 /* RESET */
 /* http://meyerweb.com/eric/tools/css/reset/
@@ -49,10 +48,24 @@ export default {
 
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700');
 
+@import './assets/style/vars';
+
 body {
   line-height: 1.25;
   font-family: 'Roboto', sans-serif;
-  font-size: 18px;
+  font-size: 14px;
+
+  @include bp($md) {
+    font-size: 16px;
+  }
+
+  @include bp($lg) {
+    font-size: 18px;
+  }
+
+  @include bp($xxl) {
+    font-size: 20px;
+  }
 }
 
 h1 {
