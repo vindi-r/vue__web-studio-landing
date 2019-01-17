@@ -1,15 +1,18 @@
 <template lang="pug">
   #app
     Header
+    Services
 </template>
 
 <script>
 import Header from './components/layout/Header.vue';
+import Services from './components/layout/Services.vue';
 
 export default {
   name: 'app',
   components: {
-    Header
+    Header,
+    Services
   }
 }
 </script>
@@ -110,9 +113,9 @@ table {
 
 .inner {
   box-sizing: border-box;
-  max-width: 1200px;
-  margin: auto;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  // max-width: 1200px;
+  // margin: auto;
+  // padding-left: 1rem;
+  // padding-right: 1rem;
 }
 </style>

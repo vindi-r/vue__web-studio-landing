@@ -47,6 +47,8 @@ export default {
   @import '../../assets/style/vars';
 
   .header {
+    display: grid;
+    grid-template-columns: 1fr 1200px 1fr;
     height: 100vh;
     max-height: 900px;
     color: $c-main;
@@ -69,11 +71,11 @@ export default {
     }
 
     &__inner {
-      height: 100%;
+      grid-column: 2 / 3;
       display: grid;
       align-items: center;
       grid-template-rows: auto 1fr;
-      padding: 3rem 1rem;
+      padding: 3rem 0;
     }
   }
 
