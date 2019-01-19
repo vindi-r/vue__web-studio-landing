@@ -6,12 +6,13 @@ $c-accent1: #f6f6f6;
 $c-accent2: #ef443a;
 
 // breakpoints
-$xs: 360px;
-$sm: 480px;
-$md: 640px;
-$lg: 960px;
-$xl: 1280px;
-$xxl: 1680px;
+$xs: 344px;
+$sm: 464px;
+$md: 624px;
+$lg: 944px;
+$xl: 1264px;
+$xxl: 1664px;
+$xxxl: 1944px;
 
 @mixin bp($point) {
   @media screen and (min-width: $point) { @content; }

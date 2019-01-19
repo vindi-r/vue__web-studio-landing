@@ -4,7 +4,7 @@
 
       .wrapper
         h1.services__title Our services
-        Divider.services__divider
+        Divider.divider_black
         p.services__description.
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
           Aenean tincidunt sit amet erat malesuada interdum. 
@@ -91,8 +91,15 @@ export default {
     grid-template-columns: 1fr 1200px 1fr;
     background-color: $c-accent1;
     color: $c-secondary;
+    overflow: hidden;
 
-    &__inner {      
+    padding: 4rem 0;
+
+    @include bp($xxxl) {
+      padding: 0;
+    }
+
+    &__inner {
       align-items: center;
       display: grid;
       grid-template-columns: 500px 1fr;
@@ -102,11 +109,6 @@ export default {
     &__title {
       text-transform: uppercase;
       margin-bottom: 0;
-    }
-
-    &__divider {
-      background-color: $c-secondary;
-      margin-top: 1rem;
     }
 
     &__description {
@@ -124,17 +126,26 @@ export default {
     grid-row: 1 / 2;
     justify-self: end;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
     grid-gap: .5rem;
 
     
-    transform: rotate(45deg) translateX(10%) translateY(-10%);
-    transform-origin: top left;
+    transform: rotate(45deg);
+    transform-origin: center center;
+
+    @include bp($xxl) {
+      transform: rotate(45deg) translateX(-15%) translateY(15%);
+    }
+
+    @include bp($xxxl) {
+      transform: rotate(45deg) translateX(-35%) translateY(25%);
+      grid-template-columns: 1fr 1fr 1fr
+    }
   }
 
   .tile {
-    width: 200px;
-    height: 200px;
+    width: 180px;
+    height: 180px;
 
     background-color: $c-main;
     display: flex;
@@ -142,19 +153,38 @@ export default {
     align-items: center;
     justify-content: center;
     text-align: center;
-
+    
     &:nth-child(1) {
-      grid-column-start: 3;
-    }
+      grid-column-start: 2;
+    }    
     &:nth-child(2) {
+      grid-column-start: 1;
+    }
+    &:nth-child(5) {
       grid-column-start: 2;
     }
-    &:nth-child(6) {
-      grid-column-start: 1;
-    }
     &:nth-child(8) {
-      grid-column-start: 1;
+      grid-column-start: 3;
     }
+    // &:nth-child(8) {
+    //   grid-column-start: 1;
+    // }
+
+    @include bp($xxxl) {
+      &:nth-child(1) {
+        grid-column-start: 3;
+      }
+      &:nth-child(2) {
+        grid-column-start: 2;
+      }
+      &:nth-child(6) {
+        grid-column-start: 1;
+      }
+      &:nth-child(8) {
+        grid-column-start: 1;
+      }
+    }
+
 
     &__content {
       transform: rotate(-45deg);
@@ -163,7 +193,7 @@ export default {
     &__title {
       color: $c-secondary;
       text-transform: uppercase;
-      font-size: .8em;
+      font-size: .7em;
     }
   }
 

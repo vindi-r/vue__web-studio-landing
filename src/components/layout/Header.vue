@@ -15,7 +15,7 @@
           br
           |turpis cursus pharetra. Fusce blandit nec tortor sit amet ullamcorper.
 
-        Divider
+        Divider.divider_primary
         Button(v-text='title')
 </template>
 

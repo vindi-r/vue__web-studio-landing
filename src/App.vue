@@ -2,17 +2,23 @@
   #app
     Header
     Services
+    Works
+    Projects
 </template>
 
 <script>
 import Header from './components/layout/Header.vue';
 import Services from './components/layout/Services.vue';
+import Works from './components/layout/Works.vue';
+import Projects from './components/layout/Projects.vue';
 
 export default {
   name: 'app',
   components: {
     Header,
-    Services
+    Services,
+    Works,
+    Projects
   }
 }
 </script>
@@ -113,6 +119,7 @@ table {
 
 .inner {
   box-sizing: border-box;
+  grid-column-start: 2;
   // max-width: 1200px;
   // margin: auto;
   // padding-left: 1rem;

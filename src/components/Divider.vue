@@ -13,9 +13,17 @@ export default {
 
   .divider {
     display: block;
-    margin: 2rem 0 3rem;
+    margin: 1rem 0 3rem;
     height: 1px;
     width: 1.5rem;
     background-color: $c-main;
+
+    &_primary {
+      margin: 2rem 0 3rem;
+    }
+
+    &_black {
+      background-color: $c-secondary;
+    }
   }
 </style>
