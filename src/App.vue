@@ -4,6 +4,8 @@
     Services
     Works
     Projects
+    Blog
+    About
 </template>
 
 <script>
@@ -11,6 +13,8 @@ import Header from './components/layout/Header.vue';
 import Services from './components/layout/Services.vue';
 import Works from './components/layout/Works.vue';
 import Projects from './components/layout/Projects.vue';
+import Blog from './components/layout/Blog.vue';
+import About from './components/layout/About.vue';
 
 export default {
   name: 'app',
@@ -18,7 +22,9 @@ export default {
     Header,
     Services,
     Works,
-    Projects
+    Projects,
+    Blog,
+    About
   }
 }
 </script>
@@ -59,7 +65,23 @@ export default {
 
 @import './assets/style/vars';
 
+::-webkit-scrollbar {
+    width: 16px;
+}
+
+::-webkit-scrollbar-track-piece  {
+    background-color: $c-secondary;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: darken($c-accent2, 15%);
+}
+::-webkit-scrollbar-thumb:active {
+    background-color: $c-accent2;
+}
+
 body {
+  color: $c-secondary;
   line-height: 1.25;
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
@@ -78,7 +100,7 @@ body {
 }
 
 h1 {
-  font-size: 3.5em;
+  font-size: 3em;
   margin-bottom: 2rem;
 }
 

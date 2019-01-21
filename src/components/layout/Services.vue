@@ -109,6 +109,7 @@ export default {
     &__title {
       text-transform: uppercase;
       margin-bottom: 0;
+      font-weight: bold;
     }
 
     &__description {
@@ -194,6 +195,7 @@ export default {
       color: $c-secondary;
       text-transform: uppercase;
       font-size: .7em;
+      font-weight: bold;
     }
   }
 

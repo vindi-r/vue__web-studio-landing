@@ -52,6 +52,7 @@ export default {
 
     &__title {
       text-transform: capitalize;
+      font-weight: bold;
     }
 
     &__description {

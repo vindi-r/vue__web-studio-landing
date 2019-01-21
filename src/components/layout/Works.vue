@@ -4,9 +4,10 @@
       .wrapper
         h1.works__title Our works
         Divider.divider_black
-      p.works__description.
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-        Aenean tincidunt sit amet at.
+      p.works__description
+        |Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+        br
+        |Aenean tincidunt sit amet at.
 </template>
 
 <script>
@@ -48,6 +49,8 @@ export default {
     &__description {
       // to align with title
       margin-top: .5rem;
+
+      color: $c-third;
     }
   }
 </style>

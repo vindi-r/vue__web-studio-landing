@@ -50,7 +50,7 @@ export default {
     display: grid;
     grid-template-columns: 1fr 1200px 1fr;
     height: 100vh;
-    max-height: 900px;
+    max-height: 1024px;
     color: $c-main;
 
     /* for ::before */
