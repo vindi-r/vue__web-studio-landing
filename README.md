@@ -1,4 +1,4 @@
-# vue__web-studio_landing
+# vue__web-studio-landing
 
 ## Project setup
 ```
