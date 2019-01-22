@@ -59,7 +59,7 @@
           tr.posts__item
             td
               h3.posts__title finally! we are here
-              p.post__text
+              p.post__text.
                 Glossy tech specs bluetooth manuals. OpenGL products 
                 FaceTime free shipping recycling mission control 
                 applications.
