@@ -11,7 +11,7 @@
 
 <script>
 export default {
-  name: "Chemical_glass"
+  name: "ChemicalGlass"
 }
 </script>
 

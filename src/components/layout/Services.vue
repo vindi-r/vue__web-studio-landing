@@ -2,7 +2,7 @@
   section.services
     .inner.services__inner
 
-      .wrapper
+      .services__wrapper
         h1.services__title Our services
         Divider.divider_black
         p.services__description.
@@ -54,7 +54,9 @@
       //-       h3.tile__title product development
 
       .tiles
-        Tile(v-for="tile in tiles") {{ tile.icon }}
+        Tile(
+          v-for="tile in tiles"
+        ) {{ tile.icon }}
           h3.tile__title {{ tile.title }}
 
 </template>
@@ -68,7 +70,7 @@ import Tile from '../Tile.vue';
 import Antenna from '../icons/Antenna.vue';
 import Bulb from '../icons/Bulb.vue';
 import Chart from '../icons/Chart.vue';
-import Chemical_glass from '../icons/Chemical_glass.vue';
+import ChemicalGlass from '../icons/ChemicalGlass.vue';
 import Layers from '../icons/Layers.vue';
 import Notes from '../icons/Notes.vue';
 import Shield from '../icons/Shield.vue';
@@ -81,7 +83,7 @@ export default {
     Antenna,
     Bulb,
     Chart,
-    Chemical_glass,
+    ChemicalGlass,
     Layers,
     Notes,
     Shield,
@@ -104,7 +106,7 @@ export default {
         title: 'seo/sem'
       },
       {
-        icon: Chemical_glass,
+        icon: ChemicalGlass,
         title: 'bussiness inteligence'
       },
       {
@@ -124,11 +126,11 @@ export default {
         title: 'product development'
       }
     ]
-  }),
+  })
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
   @import '../../assets/style/vars';
 
   .services {
@@ -151,6 +153,11 @@ export default {
       grid-column: 2 / 4;
     }
 
+    &__wrapper {
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+    }
+
     &__title {
       text-transform: uppercase;
       margin-bottom: 0;
@@ -162,10 +169,6 @@ export default {
     }
   }
 
-  .wrapper {
-    grid-column: 1 / 2;
-    grid-row: 1 / 2;
-  }
 
   // .tiles {
   //   grid-column: 1 / 3;
