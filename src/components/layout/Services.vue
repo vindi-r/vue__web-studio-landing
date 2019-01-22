@@ -55,8 +55,10 @@
 
       .tiles
         Tile(
-          v-for="tile in tiles"
-        ) {{ tile.icon }}
+        v-for="(tile, idx) in tiles"
+        :key="idx"
+        )
+          component(:is="tile.icon")
           h3.tile__title {{ tile.title }}
 
 </template>
